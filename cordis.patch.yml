@@ -1,0 +1,6 @@
+---
+# Web profile: the DeepSeek balance and the Kimi Code quota behind a badge in the composer toolbar.
+
+- insert:
+    - id: quota
+      name: dsh-quota

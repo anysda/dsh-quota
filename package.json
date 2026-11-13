@@ -1,0 +1,29 @@
+{
+  "name": "dsh-quota",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Kimi Code quota and DeepSeek balance in DSH Web: a composer badge",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "repository": "github:anysda/dsh-quota",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-cordis-client-runner"
+      ]
+    }
+  }
+}
